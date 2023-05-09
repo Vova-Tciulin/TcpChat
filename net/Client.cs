@@ -3,15 +3,15 @@ using System.Text.Json;
 using System.Text.Json.Nodes;
 using MessageLibrary;
 
-namespace net;
+namespace Client;
 
-public class Client
+public class ClientObject
 {
     private TcpClient _client;
     private StreamReader _reader;
     private StreamWriter _writer;
     private ClientMessage _message;
-    public Client(string name)
+    public ClientObject(string name)
     {
         _client = new TcpClient();
         _message = new ClientMessage(name);
